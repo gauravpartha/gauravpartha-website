@@ -1,0 +1,66 @@
+{
+  "publications": [
+    {
+      "title": "Formal Foundations for Translational Separation Logic Verifiers",
+      "authors": ["Thibault Dardinier", "Michael Sammler", "Gaurav Parthasarathy", "Alexander J. Summers", "Peter Müller"],
+      "month": "7",
+      "year": "2024",
+      "url": "https://doi.org/10.48550/arXiv.2407.20002",
+      "publication_venue": "arXiv"
+    },
+    {
+      "title": "Towards Trustworthy Automated Program Verifiers: Formally Validating Translations into an Intermediate Verification Language",
+      "authors": ["Gaurav Parthasarathy", "Thibault Dardinier", "Benjamin Bonneau", "Peter Müller", "Alexander J. Summers"],
+      "month": "6",
+      "year": "2024",
+      "publisher_url": "https://doi.org/10.1145/3656438",
+      "journal": "Proc. ACM Program. Lang.",
+      "venue": "Programming Language Design and Implementation",
+      "venue_abbrev": "(PLDI)"
+    },
+    {
+      "title": "Verification-Preserving Inlining in Automatic Separation Logic Verifiers",
+      "authors": ["Thibault Dardinier", "Gaurav Parthasarathy", "Peter Müller"],
+      "month": "4",
+      "year": "2023",
+      "publisher_url": "https://doi.org/10.1145/3586054",
+      "journal": "Proc. ACM Program. Lang.",
+      "venue": "Object-Oriented Programming, Systems, Languages & Applications",
+      "venue_abbrev": "OOPSLA"
+    },
+    {
+      "title": "Sound Automation of Magic Wands",
+      "authors": ["Thibault Dardinier", "Gaurav Parthasarathy", "Noé Weeks", "Peter Müller", "Alexander J. Summers"],
+      "month": "8",
+      "year": "2022",
+      "publisher_url": "https://doi.org/10.1007/978-3-031-13188-2_7",
+      "venue": "Computer Aided Verification",
+      "venue_abbrev": "CAV"
+    },
+    {
+      "title": "Formally Validating a Practical Verification Condition Generator",
+      "authors": ["Gaurav Parthasarathy", "Peter Müller", "Alexander J. Summers"],
+      "month": "7",
+      "year": "2021",
+      "publisher_url": "https://doi.org/10.1007/978-3-030-81688-9_33",
+      "venue": "Computer Aided Verification",
+      "venue_abbrev": "CAV"
+    },
+    {
+      "title": "The Future is Ours: Prophecy Variables in Separation Logic",
+      "authors": ["Ralf Jung",
+                  "Rodolphe Lepigre",
+                  "Gaurav Parthasarathy",
+                  "Marianna Rapoport", 
+                  "Amin Timany", 
+                  "Derek Dreyer",
+                  "Bart Jacobs"],
+      "month": "1",
+      "year": "2020",
+      "publisher_url": "https://doi.org/10.1145/3371113",
+      "journal": "Proc. ACM Program. Lang.",
+      "venue": "Principles of Programming Languages",
+      "venue_abbrev": "POPL"
+    }
+  ]
+}
