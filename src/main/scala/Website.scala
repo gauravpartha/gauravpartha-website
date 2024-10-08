@@ -7,6 +7,7 @@ object Website extends cask.MainRoutes {
   val bootstrap = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 
   lazy val aboutPageHtml = {
+    val divContentClass = "m-5"
     val mainTextHtml =
       Util.markdownToHtml("about") match {
         case Some(aboutHtml) =>
@@ -23,10 +24,10 @@ object Website extends cask.MainRoutes {
         ),
         body(
           div(cls := "container")(
-            div(cls := "m-5")(
+            div(cls := divContentClass)(
               mainTextHtml
             ),
-            div(cls := "m-5")(
+            div(cls := divContentClass)(
               h2("Research Publications"),
               Util.publicationsToHtml()
             )
@@ -49,6 +50,8 @@ object Website extends cask.MainRoutes {
   }
 
   initialize()
+
+  storeHtml()
 
   override def main(args: Array[String]): Unit = {
     if (args.contains("--start-server")) {

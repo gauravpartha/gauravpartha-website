@@ -8,6 +8,7 @@ import scalatags.Text.all._
 
 object Util {
 
+  given upickle.default.ReadWriter[PublicationUrl] = upickle.default.macroRW
   given upickle.default.ReadWriter[Publication] = upickle.default.macroRW
 
   def markdownToHtml(name: String) : Option[String] = {
@@ -32,35 +33,16 @@ object Util {
 
       val pubsInDiv = 
         for (pub <- publications) yield  {
-          val authorsHtmlList : List[scalatags.Text.TypedTag[String]] = 
-            pub.authors.zipWithIndex.map(
-              (a,id) =>  {
-                val aHtml = 
-                  if(a == "Gaurav Parthasarathy") {
-                    span(style := "color: blue;",
-                      i(a)
-                    )
-                  } else {
-                    span(a)
-                  }
-                
-                if(id == 0) {
-                  aHtml
-                } else {
-                  span(", ", aHtml)
-                }
-              }
-            )
           
           val yearAndVenueText = 
             (Seq(pub.year.toString(), pub.venue) ++
             pub.venueAbbrev.fold[Seq[String]](Nil)(abbrev => Seq(s"($abbrev)"))).mkString(" ")
-
-          Seq(div(b(pub.title)), div(authorsHtmlList))
+          
           div(cls := "mb-2",
             div(b(pub.title)),
-            div(authorsHtmlList),
-            div(yearAndVenueText)
+            authorsToHtml(pub.authors),
+            div(yearAndVenueText),
+            publicationUrlToHtml(pub.url)
           )
         }
 
@@ -71,16 +53,40 @@ object Util {
       )
     }
   }
+
+  private def authorsToHtml(authors: List[String]) : scalatags.Text.TypedTag[String] = {
+    val authorsHtmlList : List[scalatags.Text.TypedTag[String]] = 
+      authors.zipWithIndex.map(
+        (a,id) =>  {
+          val aHtml = 
+            if(a == "Gaurav Parthasarathy") {
+              span(style := "color: blue;",
+                i(a)
+              )
+            } else {
+              span(a)
+            }
+          
+          if(id == 0) {
+            aHtml
+          } else {
+            span(", ", aHtml)
+          }
+        }
+      )
+
+    div(authorsHtmlList)
+  }
+
+  private def publicationUrlToHtml(pubUrl: PublicationUrl) : scalatags.Text.TypedTag[String] = {
+    val urlList : Seq[(String, String)] = 
+      Seq((pubUrl.pdf, "pdf"), (pubUrl.publisher, "publisher")) ++
+      (pubUrl.extended match {
+        case None => Nil
+        case Some(extendedUrl) => Seq((extendedUrl, "extended version"))
+      })
+    
+    div(urlList.map{ (url, name) => a(href := url, s" [$name] ") })
+  }
   
 }
-
-case class Publication(
-  title: String,
-  authors: List[String],
-  year: Int,
-  month: Int,
-  publisherUrl: String,
-  journal: Option[String],
-  venue: String,
-  venueAbbrev: Option[String]
-)

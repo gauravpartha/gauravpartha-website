@@ -4,7 +4,11 @@
     "authors": ["Thibault Dardinier", "Michael Sammler", "Gaurav Parthasarathy", "Alexander J. Summers", "Peter Müller"],
     "month": 7,
     "year": 2024,
-    "publisherUrl": "https://doi.org/10.48550/arXiv.2407.20002",
+    "url": {
+      "pdf": "resources/papers/translational_foundations_24.pdf",
+      "publisher": "https://doi.org/10.48550/arXiv.2407.20002",
+      "extended": []
+    },
     "journal": [],
     "venue": "arXiv",
     "venueAbbrev": []
@@ -14,7 +18,11 @@
     "authors": ["Gaurav Parthasarathy", "Thibault Dardinier", "Benjamin Bonneau", "Peter Müller", "Alexander J. Summers"],
     "month": 6,
     "year": 2024,
-    "publisherUrl": "https://doi.org/10.1145/3656438",
+    "url": {
+      "pdf": "resources/papers/front_end_translation_certificates_pldi24.pdf",
+      "publisher": "https://doi.org/10.48550/arXiv.2407.20002",
+      "extended": ["https://arxiv.org/abs/2404.03614"]
+    },
     "journal": ["Proc. ACM Program. Lang."],
     "venue": "Programming Language Design and Implementation",
     "venueAbbrev": ["PLDI"]
@@ -24,7 +32,11 @@
     "authors": ["Thibault Dardinier", "Gaurav Parthasarathy", "Peter Müller"],
     "month": 4,
     "year": 2023,
-    "publisherUrl": "https://doi.org/10.1145/3586054",
+    "url": {
+      "pdf": "resources/papers/inlining_oopsla23.pdf",
+      "publisher": "https://doi.org/10.1145/3586054",
+      "extended": ["https://arxiv.org/abs/2208.10456"]
+    },
     "journal": ["Proc. ACM Program. Lang."],
     "venue": "Object-Oriented Programming, Systems, Languages & Applications",
     "venueAbbrev": ["OOPSLA"]
@@ -34,7 +46,11 @@
     "authors": ["Thibault Dardinier", "Gaurav Parthasarathy", "Noé Weeks", "Peter Müller", "Alexander J. Summers"],
     "month": 8,
     "year": 2022,
-    "publisherUrl": "https://doi.org/10.1007/978-3-031-13188-2_7",
+    "url": {
+      "pdf": "resources/papers/wands_cav22.pdf",
+      "publisher": "https://doi.org/10.1007/978-3-031-13188-2_7",
+      "extended": ["https://arxiv.org/abs/2205.11325"]
+    },
     "journal": [],
     "venue": "Computer Aided Verification",
     "venueAbbrev": ["CAV"]
@@ -44,7 +60,11 @@
     "authors": ["Gaurav Parthasarathy", "Peter Müller", "Alexander J. Summers"],
     "month": 7,
     "year": 2021,
-    "publisherUrl": "https://doi.org/10.1007/978-3-030-81688-9_33",
+    "url": { 
+      "pdf": "resources/papers/boogie_proofgen_cav21.pdf",
+      "publisher": "https://doi.org/10.1007/978-3-030-81688-9_33",
+      "extended": ["https://arxiv.org/abs/2404.03614"]
+    },
     "journal": [],
     "venue": "Computer Aided Verification",
     "venueAbbrev": ["CAV"]
@@ -60,7 +80,11 @@
                 "Bart Jacobs"],
     "month": 1,
     "year": 2020,
-    "publisherUrl": "https://doi.org/10.1145/3371113",
+    "url": {
+      "pdf": "resources/papers/prophecies_popl20.pdf",
+      "publisher": "https://doi.org/10.1145/3371113",
+      "extended": []
+    },
     "journal": ["Proc. ACM Program. Lang."],
     "venue": "Principles of Programming Languages",
     "venueAbbrev": ["POPL"]
