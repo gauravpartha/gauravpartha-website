@@ -5,9 +5,9 @@
     "month": 7,
     "year": 2024,
     "publisherUrl": "https://doi.org/10.48550/arXiv.2407.20002",
-    "journal": null,
+    "journal": [],
     "venue": "arXiv",
-    "venueAbbrev": null
+    "venueAbbrev": []
   },
   {
     "title": "Towards Trustworthy Automated Program Verifiers: Formally Validating Translations into an Intermediate Verification Language",

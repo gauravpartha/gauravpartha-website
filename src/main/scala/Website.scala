@@ -6,6 +6,7 @@ object Website extends cask.MainRoutes {
 
   val bootstrap = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
   lazy val aboutHtmlOption = Util.markdownToHtml("about")
+  lazy val publicationsHtml = Util.publicationsToHtml()
 
   @cask.get("/")
   def aboutPage() = {
@@ -27,6 +28,10 @@ object Website extends cask.MainRoutes {
           div(cls := "container")(
             div(cls := "m-5")(
               aboutHtml
+            ),
+            div(cls := "m-5")(
+              h2("Research Publications"),
+              publicationsHtml
             )
           )
         )
