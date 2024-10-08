@@ -37,9 +37,11 @@ object Website extends cask.MainRoutes {
   }
 
   // Save the HTML content when the server initializes
-  println(os.pwd / "index.html")
-  os.write(os.pwd / "index.html", aboutPageHtml.render)
-
+  def storeHtml() = {
+    val targetPath = os.pwd / "index.html"
+    println(s"Writing HTML file to $targetPath")
+    os.write.over(targetPath, aboutPageHtml.render)
+  }
 
   @cask.get("/")
   def aboutPage() = {
@@ -47,5 +49,14 @@ object Website extends cask.MainRoutes {
   }
 
   initialize()
+
+  override def main(args: Array[String]): Unit = {
+    if (args.contains("--start-server")) {
+      println("Starting server...")
+      super.main(args)
+    } else {
+      println("Server not started, just generating and saving html. Provide '--start-server' argument to start.")
+    }
+  }
 
 }
