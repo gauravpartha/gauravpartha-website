@@ -4,7 +4,7 @@
     "month": 7,
     "year": 2024,
     "url": {
-      "slides": ["slides/front_end_translation_certificates_presentation_pldi24.pdf"],
+      "slides": ["slides/front_end_translation_certificates_pldi24_slides.pdf"],
       "recording": ["https://www.youtube.com/watch?v=slnuZHrnqf0"]
     },
     "location": "Copenhagen, Denmark",
@@ -15,7 +15,7 @@
     "month": 1,
     "year": 2024,
     "url": {
-      "slides": ["slides/boogie_verifier_foundational_svd24.pdf"],
+      "slides": ["slides/boogie_verifier_foundational_svd24_slides.pdf"],
       "recording": []
     },
     "location": "Neuchâtel, Switzerland",
@@ -26,7 +26,7 @@
     "month": 7,
     "year": 2021,
     "url": {
-      "slides": ["slides/vc_gen_certificates_cav21.pdf"],
+      "slides": ["slides/boogie_certificates_cav21_slides.pdf"],
       "recording": []
     },
     "location": "Virtual",

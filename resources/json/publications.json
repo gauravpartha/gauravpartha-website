@@ -61,7 +61,7 @@
     "month": 7,
     "year": 2021,
     "url": { 
-      "pdf": "resources/papers/boogie_proofgen_cav21.pdf",
+      "pdf": "resources/papers/boogie_certificates_cav21.pdf",
       "publisher": "https://doi.org/10.1007/978-3-030-81688-9_33",
       "extended": ["https://arxiv.org/abs/2404.03614"]
     },
