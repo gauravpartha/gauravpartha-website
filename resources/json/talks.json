@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Towards Trustworthy Automated Program Verifiers: Formally Validating Translations into an Intermediate Verification Language",
+    "month": 7,
+    "year": 2024,
+    "url": {
+      "slides": ["slides/front_end_translation_certificates_presentation_pldi24.pdf"],
+      "recording": ["https://www.youtube.com/watch?v=slnuZHrnqf0"]
+    },
+    "location": "Copenhagen, Denmark",
+    "venue": "PLDI conference"
+  },
+  {
+    "title": "Making the Boogie Verifier Foundational",
+    "month": 1,
+    "year": 2024,
+    "url": {
+      "slides": ["slides/boogie_verifier_foundational_svd24.pdf"],
+      "recording": []
+    },
+    "location": "Neuchâtel, Switzerland",
+    "venue": "Swiss Verification Day"
+  },
+  {
+    "title": "Formally Validating a Practical Verification Condition Generator",
+    "month": 7,
+    "year": 2021,
+    "url": {
+      "slides": ["slides/vc_gen_certificates_cav21.pdf"],
+      "recording": []
+    },
+    "location": "Virtual",
+    "venue": "CAV conference"
+  }
+]
