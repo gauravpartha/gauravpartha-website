@@ -1,4 +1,4 @@
-package app
+package app.data
 
 case class PublicationUrl(pdf: String, publisher:String, extended: Option[String])
 

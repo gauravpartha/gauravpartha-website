@@ -24,13 +24,17 @@ object Website extends cask.MainRoutes {
         ),
         body(
           div(cls := "container")(
-            div(cls := divContentClass)(
-              mainTextHtml
-            ),
-            div(cls := divContentClass)(
-              h2("Research Publications"),
-              Util.publicationsToHtml()
-            )
+            Seq(
+              Seq(mainTextHtml),
+              Seq(
+                h3("Research Publications"),
+                Util.publicationsToHtml()
+              ),
+              Seq(
+                h3("Talks"),
+                Util.talksToHtml()
+              )
+            ).map(div(cls := divContentClass)(_))
           )
         )
       )

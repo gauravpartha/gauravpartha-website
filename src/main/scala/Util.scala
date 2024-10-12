@@ -1,8 +1,9 @@
 package app 
 
-import org.commonmark.node.*;
-import org.commonmark.parser.Parser;
-import org.commonmark.renderer.html.HtmlRenderer;
+import org.commonmark.node.*
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
+import app.data.*
 
 import scalatags.Text.all._
 
@@ -10,6 +11,9 @@ object Util {
 
   given upickle.default.ReadWriter[PublicationUrl] = upickle.default.macroRW
   given upickle.default.ReadWriter[Publication] = upickle.default.macroRW
+
+  given upickle.default.ReadWriter[TalkUrl] = upickle.default.macroRW
+  given upickle.default.ReadWriter[Talk] = upickle.default.macroRW
 
   def markdownToHtml(name: String) : Option[String] = {
     val path = os.pwd / "resources" / "md" / s"$name.md"
@@ -86,6 +90,42 @@ object Util {
         case Some(extendedUrl) => Seq((extendedUrl, "extended version"))
       })
     
+    div(urlList.map{ (url, name) => a(href := url, s" [$name] ") })
+  }
+
+  def talksToHtml() : scalatags.Text.TypedTag[String] = {
+    val pathToJson = os.pwd / "resources" / "json" / "talks.json"
+    val json = os.read(pathToJson)
+    val talks = upickle.default.read[Seq[Talk]](json)
+    
+    val talksInDiv = 
+      for (talk <- talks) yield  {
+        val locationText = 
+          if(talk.location.toLowerCase() == "virtual") {
+            "virtually"
+          } else {
+            s"in ${talk.location}"
+          }
+
+        div(cls := "mb-2",
+            div(b(talk.title)),
+            div(
+              Seq(span(s"${talk.year.toString()}  "), 
+                    a(href := talk.url.event, talk.venue), 
+                    span(s" $locationText")),
+              talkUrlToHtml(talk.url)
+            )
+        )
+      }
+      
+    div(talksInDiv)
+  }
+
+  def talkUrlToHtml(url: TalkUrl) = {
+    val urlList : Seq[(String, String)] = 
+      url.slides.fold(Seq.empty)(r => Seq((r, "slides"))) ++
+      url.recording.fold(Seq.empty)(r => Seq((r, "recording")))
+
     div(urlList.map{ (url, name) => a(href := url, s" [$name] ") })
   }
   
