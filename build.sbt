@@ -9,7 +9,6 @@ lazy val root = project
     scalaVersion := scala3Version,
 
     libraryDependencies ++= Seq(
-      "com.lihaoyi" %% "cask" % "0.9.4", 
       "com.lihaoyi" %% "scalatags" % "0.13.1",
       "com.lihaoyi" %% "os-lib" % "0.10.7",
       //can't go higher than 3.0.0 for upickle, since cask 0.9.4 depends on that version

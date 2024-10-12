@@ -2,7 +2,7 @@ package app
 
 import scalatags.Text.all._
 
-object Website extends cask.MainRoutes {
+object Website {
 
   val bootstrap = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 
@@ -48,22 +48,8 @@ object Website extends cask.MainRoutes {
     os.write.over(targetPath, aboutPageHtml.render)
   }
 
-  @cask.get("/")
-  def aboutPage() = {
-    aboutPageHtml
-  }
-
-  initialize()
-
-  storeHtml()
-
-  override def main(args: Array[String]): Unit = {
-    if (args.contains("--start-server")) {
-      println("Starting server...")
-      super.main(args)
-    } else {
-      println("Server not started, just generating and saving html. Provide '--start-server' argument to start.")
-    }
+  def main(args: Array[String]): Unit = {
+    storeHtml()
   }
 
 }
