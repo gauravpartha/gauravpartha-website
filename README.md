@@ -1,5 +1,5 @@
-# Website code for gauravp.ch
+# Website code for gauravpartha.ch
 
-This repository contains the source code for gauravp.ch.
-
-The code uses Li Haoyi's [cask framework](https://com-lihaoyi.github.io/cask/) to deal with HTTP requests.
+This repository contains the source code for generating the HTML file used in 
+gauravpartha.ch. The source code is written in Scala using Li Haoyi's [Scalatags 
+library](https://github.com/com-lihaoyi/scalatags) to write HTML code within Scala.
