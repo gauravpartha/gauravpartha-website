@@ -1,6 +1,6 @@
 ## Gaurav Parthasarathy.
 
-Hi, I am a final year PhD student at ETH Zurich in computer science. 
+Hi, I am a final year PhD student in computer science at ETH Zurich. 
 My main advisor is [Peter Müller](https://www.pm.inf.ethz.ch/people/person-detail.html?persid=112017) and my second advisor is [Alex Summers](https://www.cs.ubc.ca/~alexsumm/).
 
 I am very interested in the question: How can we develop software programs that are guaranteed to work as intended (for instance, do not crash, compute only correct results, and do not leak sensitive information)? 
