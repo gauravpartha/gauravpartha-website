@@ -42,7 +42,19 @@ object Website {
   }
 
   def storeHtml() = {
-    val targetPath = os.pwd / "index.html"
+    val outputFolder = os.pwd / "output"
+    if(os.exists(outputFolder)) {
+      println("Removing existing output folder")
+      os.remove.all(outputFolder)
+    }
+
+    println("Creating output folder")
+    os.makeDir(outputFolder)
+    val targetPath = outputFolder / "index.html"
+
+    os.copy(os.pwd / "resources" / "papers", outputFolder / "papers")
+    os.copy(os.pwd / "resources" / "slides", outputFolder / "slides")
+
     println(s"Writing HTML file to $targetPath")
     os.write.over(targetPath, aboutPageHtml.render)
   }

@@ -4,7 +4,7 @@
     "month": 7,
     "year": 2024,
     "url": {
-      "slides": ["resources/slides/front_end_translation_certificates_pldi24_slides.pdf"],
+      "slides": ["slides/front_end_translation_certificates_pldi24_slides.pdf"],
       "recording": ["https://www.youtube.com/watch?v=slnuZHrnqf0"],
       "event": "https://pldi24.sigplan.org/details/pldi-2024-papers/62/Towards-Trustworthy-Automated-Program-Verifiers-Formally-Validating-Translations-int"
     },
@@ -16,7 +16,7 @@
     "month": 1,
     "year": 2024,
     "url": {
-      "slides": ["resources/slides/boogie_verifier_foundational_svd24_slides.pdf"],
+      "slides": ["slides/boogie_verifier_foundational_svd24_slides.pdf"],
       "recording": [],
       "event": "https://proofs.swiss/svd/2024/"
     },
@@ -28,7 +28,7 @@
     "month": 7,
     "year": 2021,
     "url": {
-      "slides": ["resources/slides/boogie_certificates_cav21_slides.pdf"],
+      "slides": ["slides/boogie_certificates_cav21_slides.pdf"],
       "recording": [],
       "event": "https://i-cav.org/2021/"
     },
