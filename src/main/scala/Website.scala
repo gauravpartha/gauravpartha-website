@@ -41,7 +41,6 @@ object Website {
     )
   }
 
-  // Save the HTML content when the server initializes
   def storeHtml() = {
     val targetPath = os.pwd / "index.html"
     println(s"Writing HTML file to $targetPath")

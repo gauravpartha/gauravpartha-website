@@ -17,7 +17,6 @@ object Util {
 
   def markdownToHtml(name: String) : Option[String] = {
     val path = os.pwd / "resources" / "md" / s"$name.md"
-    println(path)
 
     if(os.exists(path)) {
       val parser = Parser.builder().build()
@@ -31,31 +30,25 @@ object Util {
 
   def publicationsToHtml() : scalatags.Text.TypedTag[String] = {
     val pathToJson = os.pwd / "resources" / "json" / "publications.json"
-    if(os.exists(pathToJson)) {
-      val json = os.read(pathToJson)
-      val publications = upickle.default.read[Seq[Publication]](json)
+    val json = os.read(pathToJson)
+    val publications = upickle.default.read[Seq[Publication]](json)
 
-      val pubsInDiv = 
-        for (pub <- publications) yield  {
-          
-          val yearAndVenueText = 
-            (Seq(pub.year.toString(), pub.venue) ++
-            pub.venueAbbrev.fold[Seq[String]](Nil)(abbrev => Seq(s"($abbrev)"))).mkString(" ")
-          
-          div(cls := "mb-2",
-            div(b(pub.title)),
-            authorsToHtml(pub.authors),
-            div(yearAndVenueText),
-            publicationUrlToHtml(pub.url)
-          )
-        }
+    val pubsInDiv = 
+      for (pub <- publications) yield  {
+        
+        val yearAndVenueText = 
+          (Seq(pub.year.toString(), pub.venue) ++
+          pub.venueAbbrev.fold[Seq[String]](Nil)(abbrev => Seq(s"($abbrev)"))).mkString(" ")
+        
+        div(cls := "mb-2",
+          div(b(pub.title)),
+          authorsToHtml(pub.authors),
+          div(yearAndVenueText),
+          publicationUrlToHtml(pub.url)
+        )
+      }
 
-      div(pubsInDiv)
-    } else {
-      div(cls := "mb-2",
-        "Error: Publications could not be retrieved"
-      )
-    }
+    div(pubsInDiv)
   }
 
   private def authorsToHtml(authors: List[String]) : scalatags.Text.TypedTag[String] = {
