@@ -63,7 +63,7 @@
     "url": { 
       "pdf": "papers/boogie_certificates_cav21.pdf",
       "publisher": "https://doi.org/10.1007/978-3-030-81688-9_33",
-      "extended": ["https://arxiv.org/abs/2404.03614"]
+      "extended": ["https://arxiv.org/abs/2105.14381"]
     },
     "journal": [],
     "venue": "Computer Aided Verification",
