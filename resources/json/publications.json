@@ -20,7 +20,7 @@
     "year": 2024,
     "url": {
       "pdf": "papers/front_end_translation_certificates_pldi24.pdf",
-      "publisher": "https://doi.org/10.48550/arXiv.2407.20002",
+      "publisher": "https://dl.acm.org/doi/10.1145/3656438",
       "extended": ["https://arxiv.org/abs/2404.03614"]
     },
     "journal": ["Proc. ACM Program. Lang."],
