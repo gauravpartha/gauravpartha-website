@@ -83,7 +83,7 @@ object Util {
         case Some(extendedUrl) => Seq((extendedUrl, "extended version"))
       })
     
-    div(urlList.map{ (url, name) => a(href := url, s" [$name] ") })
+    div(urlList.flatMap{ (url, name) => Seq(a(href := url, s"[$name]"), frag(" ")) }.dropRight(1))
   }
 
   def talksToHtml() : scalatags.Text.TypedTag[String] = {
@@ -119,7 +119,7 @@ object Util {
       url.slides.fold(Seq.empty)(r => Seq((r, "slides"))) ++
       url.recording.fold(Seq.empty)(r => Seq((r, "recording")))
 
-    div(urlList.map{ (url, name) => a(href := url, s" [$name] ") })
+    div(urlList.flatMap{ (url, name) => Seq(a(href := url, s"[$name]"), frag(" ")) }.dropRight(1))
   }
   
 }
