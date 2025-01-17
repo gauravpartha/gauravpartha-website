@@ -31,6 +31,16 @@ object Website {
                 Util.publicationsToHtml()
               ),
               Seq(
+                h3("Dissertation"),
+                div(cls := "mb-2",
+                    div(b("Formally Validating Translational Program Verifiers")),
+                    div("Final version submitted and accepted in December 2024 (defended in November 2024)"),
+                    Seq(a(href := "phd/dissertation.pdf", "[pdf]"), 
+                        frag(" "),
+                        a(href := "https://doi.org/10.3929/ethz-b-000716048", "[doi]"))
+                  )
+              ),
+              Seq(
                 h3("Talks"),
                 Util.talksToHtml()
               )
@@ -53,6 +63,7 @@ object Website {
     val targetPath = outputFolder / "index.html"
 
     os.copy(os.pwd / "resources" / "papers", outputFolder / "papers")
+    os.copy(os.pwd / "resources" / "phd", outputFolder / "phd")
     os.copy(os.pwd / "resources" / "slides", outputFolder / "slides")
 
     println(s"Writing HTML file to $targetPath")
