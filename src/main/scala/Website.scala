@@ -27,11 +27,11 @@ object Website {
             Seq(
               Seq(mainTextHtml),
               Seq(
-                h3(id="publications", "Research Publications"),
+                h3("Research Publications"),
                 Util.publicationsToHtml()
               ),
               Seq(
-                h3(id="dissertation", "Dissertation"),
+                h3("Dissertation"),
                 div(cls := "mb-2",
                     div(b("Formally Validating Translational Program Verifiers")),
                     div("Final version submitted and accepted in December 2024 (defended in November 2024)"),
@@ -41,7 +41,7 @@ object Website {
                   )
               ),
               Seq(
-                h3(id="talks", "Talks"),
+                h3("Talks"),
                 Util.talksToHtml()
               )
             ).map(div(cls := divContentClass)(_))
