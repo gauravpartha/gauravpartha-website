@@ -12,4 +12,4 @@ A distinguishing aspect of my research is that it considers *existing* implement
 
 I am currently looking for opportunities in industry, where I would like to develop high-quality software in an environment that values trustworthiness.
 My LinkedIn profile is [here](https://ch.linkedin.com/in/gaurav-parthasarathy-486554309).
-You can contact me at `first name.last name@inf.ethz.ch`.
+You can contact me  at [gaurav.parthasarathy@inf.ethz.ch](mailto:gaurav.parthasarathy@inf.ethz.ch).
